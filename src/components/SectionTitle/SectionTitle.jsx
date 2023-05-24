@@ -1,18 +1,16 @@
-// import { Statistics } from '../Statistics/Statistics';
-// import {FeedbackOptions} from '../FeedbackOptions/FeedbackOptions'
+import PropTypes from 'prop-types';
 
-export const Section = ({ title, options, onLeaveFeedback }) => {
+export const Section = ({ title, children }) => {
   return (
     <div>
       <h1>{title}</h1>
-      {/* <FeedbackOptions options={options} onLeaveFeedback={onLeaveFeedback} />
-      <Statistics
-        good={0}
-        neutral={0}
-        bad={0}
-        total={0}
-        positivePercentage={0}
-      /> */}
+      {children}
+      {/* <h2>{title}</h2> */}
+      {/* <Notification message = 'There is no feedback'/> */}
     </div>
   );
+};
+
+Section.propTypes = {
+  title: PropTypes.string,
 };
