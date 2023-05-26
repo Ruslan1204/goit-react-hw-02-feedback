@@ -36,12 +36,13 @@ export class App extends Component {
 
   render() {
     const { good, neutral, bad } = this.state;
+    const key = Object.keys(this.state)
 
     return (
       <>
         <Section title={'Please leave feedback'}>
           <FeedbackOptions
-            options={['good', 'neutral', 'bad']}
+            options={key}
             onLeaveFeedback={this.handleClickGood}
           />
         </Section>
